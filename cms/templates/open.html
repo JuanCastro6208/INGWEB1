@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open - Videojuegos</title>
+  <link rel="stylesheet" href="{% static 'css/open.css' %}" />
+</head>
+<body>
+  <header>
+    <h1>Videojuegos</h1>
+  </header>
+
+  <main class="grid-container">
+    {% for juego in videojuegos %}
+    <article class="card">
+      <img src="{{ juego.imagen.url }}" alt="{{ juego.titulo }}">
+      <div class="card-content">
+        <h2>{{ juego.titulo }}</h2>
+        <p class="summary">{{ juego.resumen }}</p>
+        <p class="description">{{ juego.descripcion }}</p>
+        <p class="keywords"><strong>Palabras clave:</strong> {{ juego.palabras_clave }}</p>
+        <button class="toggle-btn">Ver más</button>
+      </div>
+    </article>
+    {% empty %}
+    <p class="no-data">No hay videojuegos registrados en este momento.</p>
+    {% endfor %}
+  </main>
+
+  <script>
+    // Script para alternar descripción
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".toggle-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const card = btn.closest(".card");
+          card.classList.toggle("open");
+          btn.textContent = card.classList.contains("open") ? "Ver menos" : "Ver más";
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+

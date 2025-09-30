@@ -1,0 +1,47 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Preguntas Frecuentes — FYQ</title>
+  <link rel="stylesheet" href="{% static 'css/fyq.css' %}">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Preguntas Frecuentes (FAQ)</h1>
+      <p>Encuentra respuestas rápidas. Haz clic en cada pregunta para expandir la respuesta.</p>
+    </header>
+
+    <!-- Índice dinámico -->
+    <nav class="faq-index">
+      <h2>Índice</h2>
+      <ul>
+        {% for p in preguntas %}
+          <li><a href="#q{{ forloop.counter }}">{{ p.pregunta }}</a></li>
+        {% empty %}
+          <li>No hay preguntas registradas en el sistema.</li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <!-- Acordeón dinámico -->
+    <main class="accordion" id="faq-list" aria-live="polite">
+      {% for p in preguntas %}
+      <section class="item" id="q{{ forloop.counter }}">
+        <button class="trigger" aria-expanded="false" aria-controls="a{{ forloop.counter }}">
+          <span>{{ p.pregunta }}</span>
+          <span class="chev" aria-hidden="true">▾</span>
+        </button>
+        <div id="a{{ forloop.counter }}" class="content" role="region" aria-labelledby="q{{ forloop.counter }}">
+          <p>{{ p.respuesta }}</p>
+        </div>
+      </section>
+      {% endfor %}
+    </main>
+  </div>
+
+  <script src="{% static 'js/fyq.js' %}"></script>
+</body>
+</html>

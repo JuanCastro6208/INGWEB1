@@ -1,0 +1,303 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Juan Stiven Castro, ingeniero de software. Desarrollador en formación | React · Python · Flask · MySQL |. Explora mis proyectos, habilidades y certificaciones.">
+  <meta name="keywords" content="Juan Stiven Castro, ingeniero de software, backend developer, análisis de datos, portafolio, proyectos, certificaciones">
+  <meta name="author" content="Juan Stiven Castro">
+  <title>Juan Castro | Portafolio Personal</title>
+  <!-- link to font awesome for inserting icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- link to css for style -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TL7PQ9K6');
+  </script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL7PQ9K6"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">PORTA<span>FOLIO</span></div>
+    <div class="nav-links">
+      <a href="#home">Inicio</a>
+      <a href="#about">Sobre Mí</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact">Contacto</a>
+      <a href="{% url 'fyq' %}">Preguntas frecuentes</a>
+      <a href="{% url 'open' %}">Videojuegos</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section-->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Juan <span>Stiven Castro</span></h1>
+      <p>Ingeniero de software | Mi pasión es convertir ideas en realidades interactivas que cautiven a los usuarios.</p>
+    <div class="contact-item">
+      <i class="fa-solid fa-phone"></i>
+      <a id="hero-whatsapp-link" href="https://wa.me/3143146177" target="_blank" rel="nofollow">
+        +57 3143146177
+      </a>
+    </div>
+    <div class="contact-item">
+      <i class="fa-solid fa-envelope"></i>
+      <span>stivencastro.jc@academia.umb.edu.co</span>
+    </div>
+      <a href="#contact" id="cta-button" class="cta-button">Contactame</a>
+    </div>
+
+    <div class="profile-container">
+      <div class="profile-border"></div>
+      <div class="tech-icons">
+        <i class="tech-icon" style="top: 0; left: 50%;
+        transform: translateX(-50%);">⚙️</i>
+        <i class="tech-icon" style="top: 50%; right: 0;
+        transform: translateY(-50%);">🖥</i>
+        <i class="tech-icon" style="bottom: 0; left: 50%;
+        transform: translateX(-50%);">🔌</i>
+        <i class="tech-icon" style="top: 50%; left: 0;
+        transform: translateY(-50%);">🎨</i>
+      </div>
+      <img src="{% static 'images/profile.jpg' %}" alt="Profile Picture" class="profile-pic">
+    </div>
+  </section>
+
+  <!-- Banner Section -->
+  <section id="banner1" class="banner">
+    <div class="container">
+      <div class="banner-content">
+        <h3>Visita el portafolio de Jose Benjumea</h3>
+        <p>Descubre el portafolio de Jose Benjumea y sus increíbles proyectos.</p>
+        <a href="https://josebenjumea.site?utm_source=FUENTE&utm_medium=MEDIO&utm_campaign=NOMBRE_CAMPANA" target="_blank" class="btn btn-primary">Visitar Portafolio</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="banner2" class="banner">
+    <div class="container">
+      <div class="banner-content">
+        <h3>Visita el portafolio de Sebastian Cabrera</h3>
+        <p>Descubre el portafolio de Sebastian Cabrera y sus increíbles proyectos.</p>
+        <a href="?utm_source=FUENTE&utm_medium=MEDIO&utm_campaign=NOMBRE_CAMPANA" target="_blank" class="btn btn-primary">Visitar Portafolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2 class="section-title">Sobre Mí</h2>
+
+    <div class="about-content">
+      <div class="image">
+        <img src="{% static 'images/paisaje.jpeg' %}" alt="Profile Picture about" />
+      </div>
+      <div class="about-text">
+        <p>Estudiante de ingeniería de software, tecnologo en análisis y desarrollo de
+        sistemas de la información, con experiencia en diseño y mantenimiento de
+        páginas web, gestión de bases de datos (HTML,PHP, MySQL), dominio
+        intermedio en Excel y Inglés.
+        </p>  
+      
+        <div class="about-info">
+          <div class="info">
+            <p>Edad: <span>23</span></p>
+            <p>lenguaje: <span>Español, Ingles intermedio</span></p>
+            <p>Disponible: <span>Prácticas universitarias, freelance o medio tiempo</span></p>
+            <p>Ubicación: <span>Colombia</span></p>
+            <a href="{% static 'docs/HojaDeVida.pdf' %}" target="_blank"  class="btn">download CV <i class="fas fa-download"></i></a>
+          </div>          
+        </div>
+      </div>
+    </div>
+
+  <div class="skill-container">
+
+    <div class="tittle-skills">
+      <h2>Mis Habilidades</h2>
+    </div>
+
+    <div class="skills">
+      <div class="skill-item item1">
+        <div class="box">
+          <h3>HTML5<span> 95% </span> </h3>
+          <div class="progress-bar"> <span></span> </div>
+        </div>
+        <div class="box">
+          <h3>CSS3<span> 90% </span> </h3>
+          <div class="progress-bar"> <span></span> </div>
+        </div>
+        <div class="box">
+          <h3>javascript<span> 85% </span> </h3>
+          <div class="progress-bar"> <span></span> </div>
+        </div>
+        <div class="box">
+          <h3>MySQL<span> 75% </span> </h3>
+          <div class="progress-bar"> <span></span> </div>
+        </div>
+        <div class="box">
+          <h3>Python<span> 65% </span> </h3>
+          <div class="progress-bar"> <span></span> </div>
+        </div>
+        <div class="box">
+          <h3>Django<span> 40% </span> </h3>
+          <div class="progress-bar"> <span></span> </div>
+        </div>
+      </div>
+    
+      <div class="skill-item item2">
+        <div class="box">
+          <h3>Liderazgo colaborativo<span> 90% </span> </h3>
+          <div class="progress-bar"> <span></span> </div>
+        </div>
+        <div class="box">
+          <h3>Resolución de problemas complejos<span> 85% </span> </h3>
+          <div class="progress-bar"> <span></span> </div>
+        </div>
+        <div class="box">
+          <h3>Comunicación técnica<span> 80% </span> </h3>
+          <div class="progress-bar"> <span></span> </div>
+        </div>
+        <div class="box">
+          <h3>Gestión del tiempo y organización<span> 80% </span> </h3>
+          <div class="progress-bar"> <span></span> </div>
+        </div>
+        <div class="box">
+          <h3>Adaptabilidad y aprendizaje continuo<span> 80% </span> </h3>
+          <div class="progress-bar"> <span></span> </div>
+        </div>
+        <div class="box">
+          <h3>Empatía y escucha activa<span> 70% </span> </h3>
+          <div class="progress-bar"> <span></span> </div>
+        </div>
+        </div>  
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+   <section class="projects" id="projects">
+    <h2 class="section-title">Mis Proyectos</h2>
+    <div class="projects-grid">
+      <!-- 1st card -->
+      <div class="project-card">
+        <img src="{% static 'images/Green-Genius.png' %}" alt="Project 1"  class="project-img">
+        <div class="project-info">
+          <h3 class="project-title">Green Genius</h3>
+          <p class="project-description">Plataforma digital enfocada en la promoción de tecnologías renovables en Colombia, con el fin de fomentar la conciencia ambiental y el uso de energías limpias.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+          </div>
+          <div class="project-links">
+           <!-- <a href="#" class="project-link"><i class="fa-solid 
+            fa-arrow-up-right-from-square" target="_blank" rel="nofollow"></i>Live Demo</a>-->
+            <a href="https://github.com/JuanCastro6208/GreenGenius" class="project-link" target="_blank" rel="nofollow"><i class="fa-brands fa-github"></i>Code</a>
+          </div>
+        </div>
+       </div>
+       <!-- 2nd card -->
+       <div class="project-card">
+        <img src="{% static 'images/Maravillas-del-mundo.png' %}" alt="Project 2"  class="project-img">
+        <div class="project-info">
+          <h3 class="project-title">Maravillas del mundo</h3>
+          <p class="project-description">Página web interactiva para explorar y conocer información sobre las principales maravillas del mundo, presentadas de forma visual y atractiva.</p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <!--<a href="#" class="project-link" target="_blank" rel="nofollow"><i class="fa-solid 
+            fa-arrow-up-right-from-square"></i>Live Demo</a>-->
+            <a href="#" class="project-link" target="_blank" rel="nofollow"><i class="fa-brands fa-github"></i>Code</a>
+          </div>
+        </div>
+       </div>
+       <!-- 3rd card -->
+       <div class="project-card">
+        <img src="{% static 'images/escape-flight.png' %}" alt="Project 2" class="project-img">
+        <div class="project-info">
+          <h3 class="project-title">Bolsa De Empleo</h3>
+          <p class="project-description">Plataforma web orientada a la inclusión laboral, diseñada para facilitar la búsqueda y postulación de empleo de personas con discapacidad en Colombia.</p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">Bootstrap</span>
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">SQLite</span>
+            <span class="tech-tag">Jira</span>
+          </div>
+          <div class="project-links">
+            <!--<a href="#" class="project-link" target="_blank" rel="nofollow"><i class="fa-solid 
+            fa-arrow-up-right-from-square"></i>Live Demo</a>-->
+            <a href="https://github.com/Tossy06/Bolsa-De-Empleo" class="project-link" target="_blank" rel="nofollow"><i class="fa-brands fa-github"></i>Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2 class="section-title">Contacto</h2>
+    <form method="POST" action="{% url 'index' %}" class="contact-form" id="contactForm">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="id_nombre">Nombre</label>
+        <input type="text" name="nombre" id="id_nombre" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="id_email">Email</label>
+        <input type="email" name="email" id="id_email" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="id_asunto">Asunto</label>
+        <input type="text" name="asunto" id="id_asunto" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="id_mensaje">Mensaje</label>
+        <textarea name="mensaje" id="id_mensaje" class="form-textarea" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Enviar Mensaje</button>
+    </form>
+
+    {% if mensaje_exito %}
+      <p class="success">{{ mensaje_exito }}</p>
+    {% endif %}
+</section>
+
+  <!-- Footer -->
+    <footer>
+      <div class="social-links">
+        <a href="https://github.com/JuanCastro6208" class="social-link" target="_blank" rel="nofollow"><i class="fa-brands fa-github" ></i></a>
+        <a href="https://www.linkedin.com/in/juan-stiven-castro-03696422b" class="social-link" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/juanstivencastro" class="social-link" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <p class="copyright">© 2025 JuanCastro, All rights reserved.</p>
+    </footer>
+
+<!-- link to JavaScript file -->
+  <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
